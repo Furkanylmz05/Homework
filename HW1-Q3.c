@@ -1,16 +1,27 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <math.h>
 
-int main(void)
+
+int main()
 {
-    int popularity;
-    int size;
-    int homeaValue;
-    printf("Enter the popularity:");
-    scanf("%d",&popularity);
-    printf("Enter the size:");
-    scanf("%d",&size);
-    homeaValue=(popularity*popularity*popularity+size*size)*10000 ;
-    printf("Home value is:%d",homeaValue);
-    return 0;
+	int popularity;
+	int size;
+	int sizepow;   			
+	int popularitypow; 		
+	int homeValue;
+	
+	
+	printf("Enter popularity: ");
+	scanf("%d", &popularity);
+	
+	printf("Enter size: ");
+	scanf("%d", &size); 
+	
+	popularitypow = pow(popularity, 3);
+	sizepow = pow(size, 2);
+	
+	homeValue = (popularitypow + sizepow) * 10000;
+	printf("Home value is: %d ", homeValue);
+	
+	return 0;
 }
